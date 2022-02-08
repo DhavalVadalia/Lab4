@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet
         
         if(username == null || username.isEmpty()|| password == null || password.isEmpty()) 
         {
-            request.setAttribute("message", "Your Username or Password is missing.");            
+            request.setAttribute("message", "Your username or password is missing.");            
         }
         else 
         {
@@ -62,7 +62,7 @@ public class LoginServlet extends HttpServlet
             else 
             {
                 request.setAttribute("username", username);
-                request.setAttribute("message", "Your Username or Password is invalid.");
+                request.setAttribute("message", "Your username or password is invalid.");
             }
         }   
         getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
